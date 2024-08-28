@@ -1,0 +1,94 @@
+.AboutUsContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px auto;
+  height: 100vh;
+  width: 100%;
+  animation: background-changing-about 15s linear infinite;
+  background-size: cover;
+}
+
+.AboutUsContentImg {
+  height: 100%;
+  background-color: #00358065;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AboutUsContentImg img {
+  width: 800px;
+  height: 600px;
+}
+
+.AboutUsContentText {
+  padding: 20px;
+  flex: 1;
+  background-color: #ffeb3b65;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.AboutUsContentTitle {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.AboutUsContentPara {
+  color: #333;
+  text-align: justify;
+  line-height: 1.3;
+}
+
+@media (max-width: 1200px) {
+  .AboutUsContentImg img {
+    width: 600px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 991px) {
+  .AboutUsContentImg img {
+    width: 400px;
+    height: 300px;
+  }
+
+  .AboutUsContentTitle {
+    font-size: 20px;
+  }
+  
+  .AboutUsContentPara {
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .aboutSoicalIcon {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .AboutUsContentImg img {
+    display: none;
+  }
+
+  .AboutUsContentImg {
+    width: 10%;
+  }
+}
+
+
+@keyframes background-changing-about {
+  0%,
+  100% {
+    background-image: url("../../imgs/about/img1.jpg");
+  }
+  50% {
+    background-image: url("../../imgs/about/img2.jpg");
+}
+}
